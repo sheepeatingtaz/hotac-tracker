@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from campaign.models.empire import ImperialShip
+
+
+@admin.register(ImperialShip)
+class StuffAdmin(admin.ModelAdmin):
+    pass

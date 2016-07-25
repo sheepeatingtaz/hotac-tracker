@@ -1,0 +1,919 @@
+[
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "campaign",
+      "model": "imperialship"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "hotac",
+      "model": "missionarc"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "hotac",
+      "model": "mission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "hotac",
+      "model": "enemysquadron"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "hotac",
+      "model": "enemysquadroncomposition"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "bisly2cowtsrwy9dcj2q2cg6uww2x9fu",
+    "fields": {
+      "session_data": "NTIzMTMzMWEzMGVmOWZhNWNmYWMzNDBkOWZjZDM1NTU0NmFlMTJhODp7Il9hdXRoX3VzZXJfaGFzaCI6ImU0NjkwNjViNmNmMzI3MWM4NDhiMjAyNmFhNDhjZTk0ODNkNzlhNDEiLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
+      "expire_date": "2016-08-08T19:46:37.905Z"
+    }
+  },
+  {
+    "model": "campaign.imperialship",
+    "pk": 1,
+    "fields": {
+      "name": "TIE Fighter",
+      "tie": true,
+      "large": false
+    }
+  },
+  {
+    "model": "campaign.imperialship",
+    "pk": 2,
+    "fields": {
+      "name": "TIE Interceptor",
+      "tie": false,
+      "large": false
+    }
+  },
+  {
+    "model": "hotac.missionarc",
+    "pk": 1,
+    "fields": {
+      "name": "Introductory Mission"
+    }
+  },
+  {
+    "model": "hotac.mission",
+    "pk": 1,
+    "fields": {
+      "arc": 1,
+      "name": "Local Trouble"
+    }
+  },
+  {
+    "model": "hotac.enemysquadron",
+    "pk": 1,
+    "fields": {
+      "mission": 1,
+      "squadron_name": "Alpha",
+      "vector": "3",
+      "arrival": 0,
+      "ai": "A"
+    }
+  },
+  {
+    "model": "hotac.enemysquadron",
+    "pk": 2,
+    "fields": {
+      "mission": 1,
+      "squadron_name": "Bravo",
+      "vector": "4",
+      "arrival": 0,
+      "ai": "A"
+    }
+  },
+  {
+    "model": "hotac.enemysquadron",
+    "pk": 3,
+    "fields": {
+      "mission": 1,
+      "squadron_name": "Gamma",
+      "vector": "1d6",
+      "arrival": 4,
+      "ai": "A"
+    }
+  },
+  {
+    "model": "hotac.enemysquadron",
+    "pk": 4,
+    "fields": {
+      "mission": 1,
+      "squadron_name": "Delta",
+      "vector": "1d6",
+      "arrival": 7,
+      "ai": "A"
+    }
+  },
+  {
+    "model": "hotac.enemysquadroncomposition",
+    "pk": 1,
+    "fields": {
+      "enemy_squadron": 1,
+      "players": 1,
+      "ship_type": 1,
+      "conditional_ps": null,
+      "elite": false
+    }
+  },
+  {
+    "model": "hotac.enemysquadroncomposition",
+    "pk": 2,
+    "fields": {
+      "enemy_squadron": 1,
+      "players": 2,
+      "ship_type": 1,
+      "conditional_ps": null,
+      "elite": false
+    }
+  },
+  {
+    "model": "hotac.enemysquadroncomposition",
+    "pk": 3,
+    "fields": {
+      "enemy_squadron": 1,
+      "players": 4,
+      "ship_type": 1,
+      "conditional_ps": null,
+      "elite": false
+    }
+  },
+  {
+    "model": "hotac.enemysquadroncomposition",
+    "pk": 4,
+    "fields": {
+      "enemy_squadron": 1,
+      "players": 6,
+      "ship_type": 1,
+      "conditional_ps": null,
+      "elite": false
+    }
+  },
+  {
+    "model": "hotac.enemysquadroncomposition",
+    "pk": 5,
+    "fields": {
+      "enemy_squadron": 2,
+      "players": 1,
+      "ship_type": 1,
+      "conditional_ps": null,
+      "elite": false
+    }
+  },
+  {
+    "model": "hotac.enemysquadroncomposition",
+    "pk": 6,
+    "fields": {
+      "enemy_squadron": 2,
+      "players": 3,
+      "ship_type": 1,
+      "conditional_ps": null,
+      "elite": false
+    }
+  },
+  {
+    "model": "hotac.enemysquadroncomposition",
+    "pk": 7,
+    "fields": {
+      "enemy_squadron": 2,
+      "players": 5,
+      "ship_type": 1,
+      "conditional_ps": null,
+      "elite": false
+    }
+  },
+  {
+    "model": "hotac.enemysquadroncomposition",
+    "pk": 8,
+    "fields": {
+      "enemy_squadron": 3,
+      "players": 1,
+      "ship_type": 2,
+      "conditional_ps": null,
+      "elite": false
+    }
+  },
+  {
+    "model": "hotac.enemysquadroncomposition",
+    "pk": 9,
+    "fields": {
+      "enemy_squadron": 3,
+      "players": 4,
+      "ship_type": 2,
+      "conditional_ps": null,
+      "elite": false
+    }
+  },
+  {
+    "model": "hotac.enemysquadroncomposition",
+    "pk": 10,
+    "fields": {
+      "enemy_squadron": 4,
+      "players": 2,
+      "ship_type": 1,
+      "conditional_ps": null,
+      "elite": false
+    }
+  },
+  {
+    "model": "hotac.enemysquadroncomposition",
+    "pk": 11,
+    "fields": {
+      "enemy_squadron": 4,
+      "players": 3,
+      "ship_type": 1,
+      "conditional_ps": null,
+      "elite": false
+    }
+  },
+  {
+    "model": "hotac.enemysquadroncomposition",
+    "pk": 12,
+    "fields": {
+      "enemy_squadron": 4,
+      "players": 5,
+      "ship_type": 1,
+      "conditional_ps": null,
+      "elite": false
+    }
+  },
+  {
+    "model": "hotac.enemysquadroncomposition",
+    "pk": 13,
+    "fields": {
+      "enemy_squadron": 4,
+      "players": 6,
+      "ship_type": 1,
+      "conditional_ps": null,
+      "elite": false
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can add imperial ship",
+      "content_type": 7,
+      "codename": "add_imperialship"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can change imperial ship",
+      "content_type": 7,
+      "codename": "change_imperialship"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can delete imperial ship",
+      "content_type": 7,
+      "codename": "delete_imperialship"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can add mission arc",
+      "content_type": 8,
+      "codename": "add_missionarc"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can change mission arc",
+      "content_type": 8,
+      "codename": "change_missionarc"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can delete mission arc",
+      "content_type": 8,
+      "codename": "delete_missionarc"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add mission",
+      "content_type": 9,
+      "codename": "add_mission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change mission",
+      "content_type": 9,
+      "codename": "change_mission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete mission",
+      "content_type": 9,
+      "codename": "delete_mission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can add enemy squadron",
+      "content_type": 10,
+      "codename": "add_enemysquadron"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can change enemy squadron",
+      "content_type": 10,
+      "codename": "change_enemysquadron"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can delete enemy squadron",
+      "content_type": 10,
+      "codename": "delete_enemysquadron"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can add enemy squadron composition",
+      "content_type": 11,
+      "codename": "add_enemysquadroncomposition"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can change enemy squadron composition",
+      "content_type": 11,
+      "codename": "change_enemysquadroncomposition"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can delete enemy squadron composition",
+      "content_type": 11,
+      "codename": "delete_enemysquadroncomposition"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$24000$aQLfdgtLiSe7$4io4mt50eQMoOOVa+Hi6iQBhNO3GQJUI3y7FD26cxs8=",
+      "last_login": "2016-07-25T19:46:37.874Z",
+      "is_superuser": true,
+      "username": "sheepeatingtaz",
+      "first_name": "",
+      "last_name": "",
+      "email": "sheepeatingtaz@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2016-07-25T19:46:01.853Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2016-07-25T19:46:51.090Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "ImperialShip object",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2016-07-25T19:47:00.228Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "ImperialShip object",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2016-07-25T19:47:59.620Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "MissionArc object",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2016-07-25T19:48:13.441Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Mission object",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2016-07-25T19:48:30.409Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "EnemySquadron object",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2016-07-25T19:48:53.565Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "EnemySquadronComposition object",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2016-07-25T19:54:35.786Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Local Trouble",
+      "action_flag": 2,
+      "change_message": "Changed name."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2016-07-25T19:56:42.606Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "2",
+      "object_repr": "Local Trouble - Local Trouble - Alpha - [2p]",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2016-07-25T19:57:30.381Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "3",
+      "object_repr": "Local Trouble - Local Trouble - Alpha - [4p]",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2016-07-25T19:57:45.086Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "4",
+      "object_repr": "Local Trouble - Local Trouble - Alpha - [6p]",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2016-07-25T19:57:59.600Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "2",
+      "object_repr": "Local Trouble - Bravo",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2016-07-25T20:00:37.989Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "5",
+      "object_repr": "Local Trouble - Local Trouble - Bravo - [1p]",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2016-07-25T20:00:52.760Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "6",
+      "object_repr": "Local Trouble - Local Trouble - Bravo - [3p]",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2016-07-25T20:01:05.639Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "7",
+      "object_repr": "Local Trouble - Local Trouble - Bravo - [5p]",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2016-07-25T20:01:29.421Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "3",
+      "object_repr": "Local Trouble - Gamma",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2016-07-25T20:02:08.793Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "8",
+      "object_repr": "Local Trouble - Local Trouble - Gamma - [1p]",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2016-07-25T20:02:21.306Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "9",
+      "object_repr": "Local Trouble - Local Trouble - Gamma - [4p]",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2016-07-25T20:03:22.561Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "4",
+      "object_repr": "Local Trouble - Delta",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2016-07-25T20:03:43.749Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "10",
+      "object_repr": "Local Trouble - Local Trouble - Delta - [2p]",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2016-07-25T20:04:01.400Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "11",
+      "object_repr": "Local Trouble - Local Trouble - Delta - [3p]",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2016-07-25T20:04:13.293Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "12",
+      "object_repr": "Local Trouble - Local Trouble - Delta - [5p]",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2016-07-25T20:04:23.716Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "13",
+      "object_repr": "Local Trouble - Local Trouble - Delta - [6p]",
+      "action_flag": 1,
+      "change_message": "Added."
+    }
+  }
+]
