@@ -1,0 +1,13 @@
+@font-face {
+  font-family: XWingShip;
+  src: url("../bower_components/xwing-miniatures-font/dist/xwing-miniatures-ships.ttf"); }
+
+i.xwing-miniatures-ship-md {
+  font-family: XWingShip;
+  font-style: normal;
+  font-size: 3em; }
+
+i.xwing-miniatures-ship-lg {
+  font-family: XWingShip;
+  font-style: normal;
+  font-size: 5em; }

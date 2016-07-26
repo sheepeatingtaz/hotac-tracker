@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Mission{% endblock %}
+
+{% block content %}
+    <div class="row col-lg-12">
+        <div class="col-lg-6">
+        <h3>{{ mission.mission }} - {{ pilot.pilot }}</h3>
+            </div>
+        <div class="col-lg-6">
+            <h3>Turn {{ mission.turn }} <a class="btn btn-success" id="next-turn" data-url="{% url 'campaign:api:mission' mission.id%}" data-turn="{{ mission.turn }}">Next Turn</a></h3>
+        </div>
+    </div>
+    <div class="row spacer"></div>
+    {% for t in actions %}
+        {% include 'mission/kills.html' %}
+    {% endfor %}
+{% endblock %}
+
+{% block js %}
+<script src="{% static "js/site/mission/player.js" %}"></script>
+{% endblock %}

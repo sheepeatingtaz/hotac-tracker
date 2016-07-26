@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from hotac.models import EnemySquadronComposition, EnemySquadron, Mission, MissionArc
+
+
+@admin.register(MissionArc, Mission, EnemySquadron, EnemySquadronComposition)
+class HotACAdmin(admin.ModelAdmin):
+    pass
