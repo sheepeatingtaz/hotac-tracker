@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "dependencies": {
     "jquery": "^3.1.0",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "xwing-miniatures-font": "^1.0.13",
+    "js-cookie": "^2.1.2"
   }
 }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HotAC Tracker - {% block title %}{% endblock %}</title>
+
+    <link href="{% static "bower_components/bootstrap/dist/css/bootstrap.css" %}" rel="stylesheet">
+    <link href="{% static "bower_components/xwing-miniatures-font/dist/xwing-miniatures.css" %}" rel="stylesheet">
+    <link href="{% static "css/xwing-miniatures-extra.css" %}" rel="stylesheet">
+    <link href="{% static "css/bootstrap.theme.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/metisMenu.css" %}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{% static "css/sb-admin-2.css" %}" rel="stylesheet">
+    <link href="{% static "css/site.css" %}" rel="stylesheet">
+    {% block css %}{% endblock %}
+</head>
+<body>
+<div id="wrapper">
+
+    <!-- Navigation -->
+    {% include "navbar.html" %}
+    {% include "menu.html" %}
+
+    <div id="page-wrapper">
+        {% if messages %}
+            <div class="row">
+                <div class="col-lg-12">
+                    {% for message in messages %}
+                        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+        {% block content %}{% endblock %}
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+</body>
+<script src="{% static "bower_components/jquery/dist/jquery.min.js" %}"></script>
+<script src="{% static "bower_components/bootstrap/dist/js/bootstrap.min.js" %}"></script>
+<script src="{% static "bower_components/js-cookie/src/js.cookie.js" %}"></script>
+<script src="https://use.fontawesome.com/8b0f561c8a.js"></script>
+<!-- Metis Menu Plugin JavaScript -->
+<script src="{% static "js/metisMenu.js" %}"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="{% static "js/sb-admin-2.js" %}"></script>
+{% block js %}{% endblock %}
+</html>

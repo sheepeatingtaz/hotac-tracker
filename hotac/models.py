@@ -21,6 +21,15 @@ class Mission(models.Model):
     def __str__(self):
         return self.name
 
+    def ships(self, turn=0):
+        s = self.enemysquadron_set.filter(
+            arrival__lte=turn
+        )
+
+        return ImperialShip.objects.filter(
+            pk__in=s.values_list('enemysquadroncomposition__ship_type', flat=True).distinct()
+        )
+
     arc = models.ForeignKey(MissionArc)
     name = models.CharField(max_length=30)
     # map =

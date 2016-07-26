@@ -16,7 +16,12 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+from campaign.views.api.campaign import UpdateMission
+from campaign.views.api.empire import Imps
+from campaign.views.api.experience import ChalkKill
+
 urlpatterns = [
-    url(r'^campaign/', include('campaign.urls.urls', 'campaign')),
-    url(r'^admin/', admin.site.urls),
+    url(r'^kill/', ChalkKill.as_view(), name='kill'),
+    url(r'^imps/', Imps.as_view(), name='imps'),
+    url(r'^mission/(?P<pk>\d+)/', UpdateMission.as_view(), name='mission')
 ]

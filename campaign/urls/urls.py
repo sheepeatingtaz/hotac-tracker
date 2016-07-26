@@ -17,6 +17,6 @@ from django.conf.urls import url, include
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^campaign/', include('campaign.urls.urls', 'campaign')),
-    url(r'^admin/', admin.site.urls),
+    url(r'^api/', include('campaign.urls.api', 'api')),
+    url(r'^mission/(?P<mission_id>\d+)/', include('campaign.urls.mission', 'mission')),
 ]

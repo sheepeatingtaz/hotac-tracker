@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h6 class="panel-title">{{ t.name|capfirst }}</h6>
+            </div>
+            <div class="panel-body">
+                {% for ship in mission.mission.ships %}
+                    <a class="btn btn-{{ t.colour }}">
+                        <i class="xwing-miniatures-ship-md {{ ship.icon }} fa-fw"></i>&nbsp;
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
