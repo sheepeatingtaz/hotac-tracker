@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12"><p>Welcome to HotAC Tracker, {{ user }}</p></div>
+        <div class="col-lg-12">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Squadron</th>
+                    <th>Campaigns</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+
+
+                {% if user.pilotowner.squdronmemberset.count > 0 %}
+                    {% for squadron in user.pilotowner.squdronmemberset.all %}
+                        <tr>
+                            <td>{{ squadron }}</td>
+                            <td>{{ squadron.campaignset.count }}</td>
+                            <td><a href="" class="btn btn-primary">Do Stuff</a></td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+                <tr>
+                    <td colspan="3"><a href="{% url 'squadron:add' %}" class="btn btn-primary"><i class="fa fa-plus fa-fw"></i> Add New Squadron</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+{% endblock %}

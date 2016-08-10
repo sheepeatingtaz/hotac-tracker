@@ -4,6 +4,13 @@ from campaign.models.user import Pilot
 from hotac.models import Mission
 
 
+class Campaign(models.Model):
+    def __str__(self):
+        return "Operation {}".format(self.name)
+
+    name = models.CharField(max_length=50)
+
+
 class CampaignMission(models.Model):
     def __str__(self):
         return self.mission.name

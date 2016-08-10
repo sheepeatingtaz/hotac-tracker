@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="row">
+    {% crispy form %}
+    </div>
+{% endblock %}
+
+{% block js %}
+{% endblock %}

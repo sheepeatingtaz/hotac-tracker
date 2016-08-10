@@ -14,9 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
-from django.contrib import admin
 
 urlpatterns = [
     url(r'^api/', include('campaign.urls.api', 'api')),
     url(r'^mission/(?P<mission_id>\d+)/', include('campaign.urls.mission', 'mission')),
+
 ]

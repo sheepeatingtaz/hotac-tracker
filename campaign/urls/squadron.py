@@ -13,15 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url, include
-from django.contrib import admin
+from django.conf.urls import url
 
-from campaign.views.home import Home
+from campaign.views.mission import MissionPlayer
+from campaign.views.squadron import SquadronCreate
 
 urlpatterns = [
-
-    url(r'^$', Home.as_view(), name='home'),
-    url(r'^squadron/', include('campaign.urls.squadron', 'squadron')),
-    url(r'^campaign/', include('campaign.urls.urls', 'campaign')),
-    url(r'^admin/', admin.site.urls),
+    url(r'^add/$', SquadronCreate.as_view(), name='add'),
 ]

@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'crispy_forms',
 
     'campaign',
     'hotac',
@@ -105,9 +106,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-gb'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/London'
 
 USE_I18N = True
 
@@ -133,6 +134,8 @@ REST_FRAMEWORK = {
     ),
     'PAGE_SIZE': 10
 }
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 try:
     from .local_settings import *
