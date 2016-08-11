@@ -1,6 +1,6 @@
 from django.db import models
 
-from campaign.models.user import Pilot
+from campaign.models.user import Pilot, Squadron
 from hotac.models import Mission
 
 
@@ -9,6 +9,7 @@ class Campaign(models.Model):
         return "Operation {}".format(self.name)
 
     name = models.CharField(max_length=50)
+    sqaudron = models.ForeignKey(Squadron)
 
 
 class CampaignMission(models.Model):

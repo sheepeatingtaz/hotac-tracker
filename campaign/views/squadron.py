@@ -27,6 +27,7 @@ class SquadronView(View):
             my_pilot = SquadronMember(
                 pilot_owner=self.request.user.pilotowner,
                 squadron=self.object,
+                admin=True,
             )
             my_pilot.save()
         return super().form_valid(form)
@@ -35,15 +36,21 @@ class SquadronView(View):
         return reverse('squadron:detail', kwargs={'pk': self.object.pk})
 
 
+
+
 class SquadronCreate(SquadronView, CreateView):
     pass
 
 
 class SquadronUpdate(SquadronView, UpdateView):
-    print("HEllo")
     pass
 
 class SquadronDetail(SquadronView, DetailView):
     template_name = 'squadron/detail.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['squadron_admin'] = context['squadron'].squadronmember_set.filter(pilot_owner=self.request.user.pilotowner).count() > 0
+        return context
 
 

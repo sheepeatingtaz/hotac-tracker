@@ -40,6 +40,10 @@ class SquadronMember(models.Model):
             'squadron',
             'pilot_owner',
         )
+        ordering = (
+            '-admin',
+            'pilot_owner'
+        )
 
     squadron = models.ForeignKey(Squadron)
     pilot_owner = models.ForeignKey(PilotOwner)

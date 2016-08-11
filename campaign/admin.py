@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from campaign.models.campaign import CampaignMission, CampaignMissionParticipant
+from campaign.models.campaign import CampaignMission, CampaignMissionParticipant, Campaign
 from campaign.models.empire import ImperialShip
 from campaign.models.user import PilotOwner, Pilot, Squadron, SquadronMember
 
@@ -10,7 +10,7 @@ class StuffAdmin(admin.ModelAdmin):
     pass
 
 
-@admin.register(CampaignMission, CampaignMissionParticipant)
+@admin.register(Campaign, CampaignMission, CampaignMissionParticipant)
 class CampaignMissionAdmin(admin.ModelAdmin):
     pass
 
@@ -26,5 +26,6 @@ class SquadronAdmin(admin.ModelAdmin):
 class SquadronMemberAdmin(admin.ModelAdmin):
     list_display = (
         'pilot_owner',
-        'squadron'
+        'squadron',
+        'admin',
     )
