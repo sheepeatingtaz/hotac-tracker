@@ -17,12 +17,12 @@
                 <tbody>
 
 
-                {% if user.pilotowner.squdronmemberset.count > 0 %}
-                    {% for squadron in user.pilotowner.squdronmemberset.all %}
+                {% if user.pilotowner.squadronmember_set.count > 0 %}
+                    {% for squadronmember in user.pilotowner.squadronmember_set.all %}
                         <tr>
-                            <td>{{ squadron }}</td>
-                            <td>{{ squadron.campaignset.count }}</td>
-                            <td><a href="" class="btn btn-primary">Do Stuff</a></td>
+                            <td>{{ squadronmember.squadron }}</td>
+                            <td>{{ squadronmember.campaign_set.count|default:0 }}</td>
+                            <td><a href="{% url 'squadron:update' squadronmember.squadron.id %}" class="btn btn-primary">Edit Details</a></td>
                         </tr>
                     {% endfor %}
                 {% endif %}

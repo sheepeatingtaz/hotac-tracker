@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>
+                {{ squadron }}
+                <a href="{% url 'squadron:update' squadron.pk %}" class="btn btn-primary pull-right">
+                    <i class="xwing-miniatures-ship xwing-miniatures-ship-xwing"></i>
+                    Edit
+                </a>
+                <a href="{% url 'squadron:update' squadron.pk %}" class="btn btn-primary pull-right">
+                    <i class="xwing-miniatures-ship xwing-miniatures-ship-ywing"></i>
+                    Edit Members
+                </a>
+            </h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+{% endblock %}

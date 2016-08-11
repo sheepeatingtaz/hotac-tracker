@@ -6,7 +6,7 @@ from django import forms
 from campaign.models.user import Squadron
 
 
-class SquadronCreate(forms.ModelForm):
+class SquadronForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
@@ -23,6 +23,7 @@ class SquadronCreate(forms.ModelForm):
             Fieldset(
                 'Create New Squadron',
                 'name',
+                'invite_only',
             )
         )
 
@@ -32,7 +33,9 @@ class SquadronCreate(forms.ModelForm):
             ),
         )
 
-
     class Meta:
         model = Squadron
-        fields = ('name',)
+        fields = (
+            'name',
+            'invite_only',
+        )

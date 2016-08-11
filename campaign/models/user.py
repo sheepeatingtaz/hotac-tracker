@@ -30,6 +30,8 @@ class Squadron(models.Model):
     def __str__(self):
         return self.name
     name = models.CharField(max_length=50, unique=True)
+    invite_only = models.BooleanField(default=True)
+    archived = models.BooleanField(default=False)
 
 
 class SquadronMember(models.Model):

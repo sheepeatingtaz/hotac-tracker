@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 
-from campaign.views.mission import MissionPlayer
-from campaign.views.squadron import SquadronCreate
+from campaign.views.squadron import SquadronCreate, SquadronDetail, SquadronUpdate
 
 urlpatterns = [
     url(r'^add/$', SquadronCreate.as_view(), name='add'),
+    url(r'(?P<pk>\d+)/$', SquadronDetail.as_view(), name='detail'),
+    url(r'(?P<pk>\d+)/edit', SquadronUpdate.as_view(), name='update'),
 ]
